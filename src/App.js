@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import {Container,AppBar,Typography,Grow,Grid} from '@material-ui/core';
-import cm from './images/cm.jpg'
+import camp from './images/camp.png'
+import mt from './images/mt.png'
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import useStyles from './styles';
@@ -17,12 +18,13 @@ const App = () => {
   return (
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position='static' color='inherit'>
-        <Typography className={classes.heading} variant="h2" align='center'> Memories</Typography>
-        <img className={classes.image} src={cm} alt="memories" height="60"/>
+        {/* <Typography className={classes.heading} variant="h5" align='center'> HT</Typography> */}
+        <img className={classes.image} src={camp} alt="memories" height="60"/>
+        <img className={classes.image} src={mt} alt="memories" height="60"/>
       </AppBar>
       <Grid in>
         <Container>
-          <Grid container justify='space-between' alignItems='stretch' spacing={3}>
+          <Grid className={classes.mainContainer} container justify='space-between' alignItems='stretch' spacing={3}>
             <Grid item xs={12} sm={7}>
               <Posts setCurrentId={setCurrentId} />
             </Grid>
