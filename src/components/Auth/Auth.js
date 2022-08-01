@@ -21,7 +21,6 @@ const SignUp = () => {
   const classes = useStyles();
 
   const [showPassword, setShowPassword] = useState(false);
-
   const handleShowPassword = () => setShowPassword(!showPassword);
 
   const switchMode = () => {
@@ -53,7 +52,9 @@ const SignUp = () => {
     }
   };
 
-  const googleError = () => console.log('Google Sign In was unsuccessful. Try again later');
+  const googleError = (error) => {
+    console.log(error);
+    console.log('Google Sign In was unsuccessful. Try again later');}
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -80,7 +81,7 @@ const SignUp = () => {
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
           <GoogleLogin
-            clientId="195669715318-gaovdhd0jrc8ivt0lpqvbivfn8vks85l.apps.googleusercontent.com"
+            clientId="195669715318-88okdfh3ovkb2sdv415cmns6n1k4kenh.apps.googleusercontent.com"
             render={(renderProps) => (
               <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
                 Google Sign In
@@ -90,7 +91,7 @@ const SignUp = () => {
             onFailure={googleError}
             cookiePolicy="single_host_origin"
           />
-          <Grid container justify="center">
+          <Grid container justify="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
                 { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }
