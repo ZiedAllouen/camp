@@ -37,11 +37,15 @@ const Navbar = () => {
   return (
 
     <AppBar className={classes.appBar} position='static' color='inherit'>
-    <Link to='/' className={classes.brandContainer} >
+      <div className={classes.brandContainer}>
+    <Link to='/'  >
         <img  className={classes.image1} src={camp} alt="memories" height="60"/>
+        </Link>
+        <Link to='items'  >
         <img className={classes.image} src={mt} alt="memories" height="60"/>
         {/* <Typography component={Link} to='/' className={classes.heading} variant="h5" align='center'> HT</Typography> */}
     </Link>
+    </div>
     <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>
