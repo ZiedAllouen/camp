@@ -3,18 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Pagination, PaginationItem } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
 
-import { getPosts } from '../actions/posts';
-import useStyles from './styles';
+import { getItems } from '../../actions/items';
+import useStyles from '../FormP/styles';
 
 const Paginate = ({ page }) => {
-  const { numberOfPages } = useSelector((state) => state.posts);
+  const { numberOfPages } = useSelector((state) => state.items);
   const dispatch = useDispatch();
 
   const classes = useStyles();
 
   useEffect(() => {
     if (page) {
-      dispatch(getPosts(page));
+      dispatch(getItems(page));
     }
   }, [dispatch, page]);
 
@@ -26,7 +26,7 @@ const Paginate = ({ page }) => {
       variant="outlined"
       color="primary"
       renderItem={(item) => (
-        <PaginationItem {...item} component={Link} to={`/posts?page=${item.page}`} />
+        <PaginationItem {...item} component={Link} to={`/items?page=${item.page}`} />
       )}
     />
   );

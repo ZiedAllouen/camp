@@ -27,3 +27,6 @@ export const signUp = (formData) => API.post('/user/signup', formData);
 
 export const fetchItems = (id) => API.get(`/items`);
 export const createItem = (newItem) => API.post('/items', newItem);
+export const updateItem = (id, updatedItem) => API.patch(`/items/${id}`, updatedItem);
+export const deleteItem = (id) => API.delete(`/items/${id}`);
+export const likeItem = (id) => API.patch(`/items/${id}/likeItem`);
