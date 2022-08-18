@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, CircularProgress } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
 import { useSelector } from 'react-redux';
 
 import Post from './Post/Post';
@@ -9,7 +10,9 @@ const Posts = ({ setCurrentId }) => {
   const { posts, isLoading } = useSelector((state) => state.posts);
   const classes = useStyles();
 
-  if (!posts.length && !isLoading) return 'No posts';
+  if (!posts.length && !isLoading) return (
+    <Alert severity="info">There are no posts yet-check it out later !</Alert>
+  );
 
   return (
     isLoading ? <CircularProgress /> : (

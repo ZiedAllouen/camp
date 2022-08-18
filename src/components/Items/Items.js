@@ -26,10 +26,10 @@ const Items = () => {
   const [tags, setTags] = useState([]);
   const history = useHistory();
 
-  const searchPost = () => {
+  const searchItem = () => {
     if (search.trim() || tags) {
       dispatch(getItemsBySearch({ search, tags: tags.join(',') }));
-      history.push(`/posts/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
+      history.push(`/items/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
     } else {
       history.push('/');
     }
@@ -37,7 +37,7 @@ const Items = () => {
 
   const handleKeyPress = (e) => {
     if (e.keyCode === 13) {
-      searchPost();
+      searchItem();
     }
   };
 
@@ -64,7 +64,7 @@ const Items = () => {
                 label="Search Tags"
                 variant="outlined"
               />
-              <Button onClick={searchPost} className={classes.searchButton} variant="contained" color="primary">Search</Button>
+              <Button onClick={searchItem} className={classes.searchButton} variant="contained" color="primary">Search</Button>
             </AppBar>
               <FormP  currentId={currentId} setCurrentId={setCurrentId} />
               {(!searchQuery && !tags.length) && (

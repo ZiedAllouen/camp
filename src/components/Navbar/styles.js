@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '6px 50px',
+    padding: '10px 50px',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
@@ -20,7 +20,8 @@ export default makeStyles((theme) => ({
     
   },
   image: {
-    marginLeft: '15px',
+    marginLeft: '10px',
+    marginTop: '5px',
   },
   sign: {
     marginLeft: '150px',
@@ -29,15 +30,28 @@ export default makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-end',
     width: '400px',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+    },
   },
   profile: {
     display: 'flex',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     width: '400px',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+      marginTop: 20,
+      justifyContent: 'center',
+    },
+  },
+  logout: {
+    marginLeft: '20px',
   },
   userName: {
     display: 'flex',
     alignItems: 'center',
+    textAlign: 'center',
   },
   brandContainer: {
     display: 'flex',

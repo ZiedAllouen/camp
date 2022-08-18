@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography , ButtonBase} from '@material-ui/core/';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
@@ -7,6 +7,7 @@ import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import PinDropIcon from '@material-ui/icons/PinDrop';
+import { useHistory } from 'react-router-dom';
 
 import { likeItem, deleteItem } from '../../../actions/items';
 import useStyles from './styles';
@@ -15,7 +16,8 @@ const PostItem = ({ item, setCurrentId }) => {
   const [likes, setLikes] = useState(item?.likes);
     const dispatch = useDispatch();
     const classes = useStyles();
-
+    const history = useHistory();
+    
     const userId = user?.result.googleId || user?.result?._id;
     const hasLikedPost = item.likes.find((like) => like === userId);
   
@@ -41,9 +43,20 @@ const PostItem = ({ item, setCurrentId }) => {
   
       return <><ThumbUpAltOutlined fontSize="small" />&nbsp;Like</>;
     };
-    
+    const openPost = (e) => {
+  
+      history.push(`/items/${item._id}`);
+    };
     return (
-        <Card className={classes.card}>
+        <Card className={classes.card} raised elevation={6}>
+          <ButtonBase
+        component="span"
+        name="test"
+        className={classes.cardAction}
+        onClick={openPost}
+      >
+
+      
         <CardMedia className={classes.media} image={item.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title={item.item} />
         <div className={classes.overlay}>
           <Typography variant="h6">{item.name}</Typography>
@@ -62,6 +75,7 @@ const PostItem = ({ item, setCurrentId }) => {
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">{item.message}</Typography>
         </CardContent>
+        </ButtonBase>
         <CardActions className={classes.cardActions}>
         <Button size="small" color="primary" disabled={!user?.result} onClick={handleLike}>
           <Likes />

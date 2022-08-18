@@ -9,7 +9,7 @@ import { createItem, updateItem } from '../../actions/items';
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ creator: '', item: '', message: '', tags: '',phone:'',address:'', selectedFile: '' });
-  const item = useSelector((state) => (currentId ? state.items.find((message) => message._id === currentId) : null));
+  const item = useSelector((state) => (currentId ? state.items.items.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
   const user = JSON.parse(localStorage.getItem('profile'));

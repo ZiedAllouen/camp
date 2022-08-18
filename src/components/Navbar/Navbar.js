@@ -39,10 +39,10 @@ const Navbar = () => {
     <AppBar className={classes.appBar} position='static' color='inherit'>
       <div className={classes.brandContainer}>
     <Link to='/'  >
-        <img  className={classes.image1} src={camp} alt="memories" height="60"/>
+        <img  className={classes.image1} src={camp} alt="icon" height="50"/>
       </Link>
       <Link to='items'  >
-        <img className={classes.image} src={mt} alt="memories" height="50"/>
+        <img className={classes.image} src={mt} alt="icon" height="45"/>
         {/* <Typography component={Link} to='/' className={classes.heading} variant="h5" align='center'> HT</Typography> */}
     </Link>
     </div>
