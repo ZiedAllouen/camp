@@ -9,11 +9,9 @@ export default makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(255, 250, 250, 0.8)',
-    
   },
   heading: {
     color: 'rgba(0,183,255, 1)',
-    
   },
   image: {
     marginLeft: '15px',

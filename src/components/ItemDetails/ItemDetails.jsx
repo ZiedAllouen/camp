@@ -3,6 +3,7 @@ import { Paper, Typography, CircularProgress, Divider } from '@material-ui/core/
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { useParams, useHistory, Link } from 'react-router-dom';
+import PinDropIcon from '@material-ui/icons/PinDrop';
 
 import { getItem, getItemsBySearch } from '../../actions/items';
 import CommentSection from './CommentSection';
@@ -43,7 +44,7 @@ const Item = () => {
     <Paper style={{ padding: '20px', borderRadius: '15px' }} elevation={6}>
       <div className={classes.card}>
         <div className={classes.section}>
-          <Typography variant="h3" component="h2">{item.title}</Typography>
+          <Typography variant="h3" component="h2">{item.item}</Typography>
           <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{item.tags.map((tag) => (
             <Link to={`/tags/${tag}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
               {` #${tag} `}
@@ -51,17 +52,17 @@ const Item = () => {
           ))}
           </Typography>
           <Typography gutterBottom variant="body1" component="p">{item.message}</Typography>
-          <Typography variant="h6">
-            Created by:
-            <Link to={`/creators/${item.name}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
+          <Typography gutterBottom variant="body3" component="h3"><PinDropIcon fontSize='small'/>{item.address}</Typography>
+          <Typography gutterBottom variant="body1" component="p">Call us :+216 {item.phone}</Typography>
+          <Typography variant="body1">
+            Posted by:
+            <Link to={`/creator/${item.name}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
               {` ${item.name}`}
             </Link>
           </Typography>
           <Typography variant="body1">{moment(item.createdAt).fromNow()}</Typography>
           <Divider style={{ margin: '20px 0' }} />
-          <Typography variant="body1"><strong>Realtime Chat - coming soon!</strong></Typography>
-          <Divider style={{ margin: '20px 0' }} />
-          <CommentSection post={item} />
+          <CommentSection item={item} />
           <Divider style={{ margin: '20px 0' }} />
         </div>
         <div className={classes.imageSection}>
