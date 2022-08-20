@@ -10,6 +10,7 @@ import Auth from './components/Auth/Auth';
 import CreatorOrTagOP from './components/PostDetails/CreatorOrTagOP'
 import CreatorOrTagOI from './components/ItemDetails/CreatorOrTagOI'
 import Items from './components/Items/Items';
+import Fpage from './components/Fpage/Fpage'
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -29,6 +30,7 @@ const App = () => {
           <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTagOP} />
           <Route path={['/creator/:name', '/tags/:name']} component={CreatorOrTagOI} />
           <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
+          <Route path="/fpage" exact component={Fpage} />
         </Switch>
       </Container>
     </BrowserRouter>

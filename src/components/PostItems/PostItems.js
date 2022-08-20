@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 
 import PostItem from './PostItem/PostItem'
 import useStyles from './styles';
+
 const PostItems = ({ setCurrentId }) => {
   const { items, isLoading } = useSelector((state) => state.items);
   const classes = useStyles();

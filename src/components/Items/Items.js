@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Container, AppBar, TextField, Typography,Button, Grow, Grid, Paper } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Container, Grow, Grid, AppBar, TextField, Button, Paper } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import ChipInput from 'material-ui-chip-input';
 
 import PostItems from '../PostItems/PostItems';
 import FormP from '../FormP/FormP';
-import { getItems,getItemsBySearch } from '../../actions/items'
+import { getItemsBySearch } from '../../actions/items'
 import useStyles from './styles';
 import Pagination from './Pagination'
 function useQuery() {
@@ -46,9 +46,9 @@ const Items = () => {
   const handleDeleteChip = (chipToDelete) => setTags(tags.filter((tag) => tag !== chipToDelete));
 
   return (
+  <Grow in>
     <Container maxWidth="xl">
-      <Grow in>
-        <Container>
+        
           <Grid container justify="space-between" alignItems="stretch" spacing={3} className={classes.gridContainer}>
             <Grid item xs={12} sm={6} md={9}>
               <PostItems setCurrentId={setCurrentId} />
@@ -75,8 +75,7 @@ const Items = () => {
             </Grid>
           </Grid>
         </Container>
-      </Grow>
-    </Container>
+    </Grow>
   );
 };
 
