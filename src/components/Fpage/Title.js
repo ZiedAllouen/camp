@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useStyles from './styles';
-import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
-import SortIcon from '@material-ui/icons/Sort';
+import {  IconButton,  Collapse } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll';
 
@@ -15,7 +14,7 @@ const Title = () => {
     <div className={classes.head} id="header">
          <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}collapsedHeight={50}>
         <div className={classes.container}>
-          <h1 className={classes.title}>
+          <h1 className={classes.titlehead}>
             Welcome to <br />
             Our<span className={classes.colorText}>Camp.</span>
           </h1>

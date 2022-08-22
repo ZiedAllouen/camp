@@ -64,8 +64,8 @@ const PostItem = ({ item, setCurrentId }) => {
           <Typography variant="body2">{moment(item.createdAt).fromNow()}</Typography>
         </div>
         {(user?.result?.googleId === item?.creator || user?.result?._id === item?.creator) && (
-        <div className={classes.overlay2}>
-          <Button style={{ color: 'white' }} size="small" onClick={() => setCurrentId(item._id)}><MoreHorizIcon fontSize="default" /></Button>
+        <div className={classes.overlay2} name="edit">
+          <Button style={{ color: 'white' }} size="small" onClick={(e) =>{e.stopPropagation(); setCurrentId(item._id)}}><MoreHorizIcon fontSize="default" /></Button>
         </div>)}
         <div className={classes.details}>
           <Typography variant="body2" color="textSecondary" component="h2">{item.tags.map((tag) => `#${tag} `)}</Typography>

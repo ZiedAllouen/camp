@@ -31,6 +31,7 @@ export default makeStyles((theme) => ({
     borderRadius: 4,
     marginTop: '1rem',
     padding: '16px',
+    backgroundColor: 'rgba(255, 250, 250, 0.8)',
   },
   gridContainer: {
     [theme.breakpoints.down('xs')]: {

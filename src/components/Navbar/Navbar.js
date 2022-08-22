@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import useStyles from './styles';
 import camp from '../../images/camp.png';
 import mt from '../../images/mt.png';
+import ca from '../../images/ca.png';
+import it from '../../images/it.png';
 import {Link,useHistory,useLocation} from "react-router-dom";
 import * as actionType from '../../constants/actionTypes';
 import decode from 'jwt-decode';
@@ -41,10 +43,15 @@ const Navbar = () => {
     <Link to='/'  >
         <img  className={classes.image1} src={camp} alt="icon" height="50"/>
       </Link>
-      <Link to='items'  >
+      <Link to='center'  >
         <img className={classes.image} src={mt} alt="icon" height="45"/>
-        {/* <Typography component={Link} to='/' className={classes.heading} variant="h5" align='center'> HT</Typography> */}
-    </Link>
+        </Link>
+      <Link to='posts'  >
+        <img className={classes.image} src={ca} alt="icon" height="45"/>
+        </Link>
+      <Link to='items'  >
+        <img className={classes.image} src={it} alt="icon" height="45"/>
+        </Link>
     </div>
     <Toolbar className={classes.toolbar}>
         {user?.result ? (

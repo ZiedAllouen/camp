@@ -25,7 +25,7 @@ head: {
     textAlign: 'center',
   },
 
-  title: {
+  titlehead: {
     color: '#fff',
     fontSize: '4.5rem',
   },
@@ -47,17 +47,18 @@ head: {
 
 
   card: {
-    maxWidth: 645,
+    maxWidth: 400,
+  
     background: 'rgba(0,0,0,0.5)',
     margin: '20px',
   },
   media: {
-    height: 440,
+    height: 400,
   },
   title: {
     fontFamily: 'Nunito',
     fontWeight: 'bold',
-    fontSize: '4rem',
+    fontSize: '2rem',
     color: '#fff',
   },
   desc: {

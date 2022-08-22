@@ -11,6 +11,7 @@ import CreatorOrTagOP from './components/PostDetails/CreatorOrTagOP'
 import CreatorOrTagOI from './components/ItemDetails/CreatorOrTagOI'
 import Items from './components/Items/Items';
 import Fpage from './components/Fpage/Fpage'
+import CampCenter from './components/CampCenter/CampCenter';
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -20,7 +21,7 @@ const App = () => {
       <Container maxWidth="xl">
         <Navbar />
         <Switch>
-          <Route path="/" exact component={() => <Redirect to="/posts" />} />
+          <Route path="/" exact component={() => <Redirect to="/fpage" />} />
           <Route path="/posts" exact component={Home} />
           <Route path="/items" exact component={Items} />
           <Route path="/posts/search" exact component={Home} />
@@ -29,8 +30,9 @@ const App = () => {
           <Route path="/items/:id" exact component={ItemDetails} />
           <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTagOP} />
           <Route path={['/creator/:name', '/tags/:name']} component={CreatorOrTagOI} />
-          <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
+          <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/fpage" />)} />
           <Route path="/fpage" exact component={Fpage} />
+          <Route path="/center" exact component={CampCenter} />
         </Switch>
       </Container>
     </BrowserRouter>
