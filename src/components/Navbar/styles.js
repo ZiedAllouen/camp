@@ -15,10 +15,7 @@ export default makeStyles((theme) => ({
     backgroundColor: 'rgba(255, 250, 250, 0.8)',
     
   },
-  heading: {
-    color: 'rgba(0,183,255, 1)',
-    
-  },
+
   image: {
     marginLeft: '10px',
     marginTop: '5px',
@@ -56,6 +53,15 @@ export default makeStyles((theme) => ({
   brandContainer: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-end',
+    
+  },
+  navContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    margin:'auto' ,
+    
   },
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),

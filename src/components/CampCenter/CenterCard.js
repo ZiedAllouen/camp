@@ -3,8 +3,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import { Button, Collapse } from '@material-ui/core';
-
+import { Button } from '@material-ui/core';
+import {Link} from "react-router-dom";
 import useStyles from './styles';
 
 export default function ImageCard({ place, checked }) {
@@ -35,7 +35,9 @@ export default function ImageCard({ place, checked }) {
           >
             {place.description}
           </Typography>
-          <Button>click me</Button>
+          <Link to={place.link}>
+      <Button  variant="contained" color="primary" size="small" >See Map</Button>
+    </Link>
         </CardContent>
       </Card>
     </>

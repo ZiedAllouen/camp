@@ -10,29 +10,28 @@ export default function () {
   return (
     <>
     <div className={classes.places} >
-      <CenterCard place={places[2]}  />
+      <CenterCard place={places[0]}  />
       <Divider className={classes.Divider} orientation="vertical" flexItem />
       <CenterCard place={places[1]}  />
       <Divider className={classes.Divider} orientation="vertical" flexItem />
-      <CenterCard place={places[0]} />
+      <CenterCard place={places[2]} />
+      
+    </div>
+    <div className={classes.places} >
+      <CenterCard place={places[3]}  />
+      <Divider className={classes.Divider} orientation="vertical" flexItem />
+      <CenterCard place={places[4]}  />
+      <Divider className={classes.Divider} orientation="vertical" flexItem />
+      <CenterCard place={places[5]} />
       
       
     </div>
     <div className={classes.places} >
-      <CenterCard place={places[2]}  />
+      <CenterCard place={places[6]}  />
       <Divider className={classes.Divider} orientation="vertical" flexItem />
-      <CenterCard place={places[1]}  />
+      <CenterCard place={places[7]}  />
       <Divider className={classes.Divider} orientation="vertical" flexItem />
-      <CenterCard place={places[0]} />
-      
-      
-    </div>
-    <div className={classes.places} >
-      <CenterCard place={places[2]}  />
-      <Divider className={classes.Divider} orientation="vertical" flexItem />
-      <CenterCard place={places[1]}  />
-      <Divider className={classes.Divider} orientation="vertical" flexItem />
-      <CenterCard place={places[0]} />
+      <CenterCard place={places[8]} />
       
       
     </div>

@@ -44,13 +44,17 @@ head: {
     fontSize: '2rem',
   },
 
+button:{
 
+  textAlign: "center"
+},
 
   card: {
     maxWidth: 400,
   
     background: 'rgba(0,0,0,0.5)',
     margin: '20px',
+    borderRadius:'30px'
   },
   media: {
     height: 400,

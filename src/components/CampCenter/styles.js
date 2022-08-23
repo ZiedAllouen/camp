@@ -48,14 +48,14 @@ head: {
 
   card: {
     maxWidth: 400,
-  
-    background: 'rgba(0,0,0,0.5)',
+  borderRadius:"20px",
+    background: 'rgba(0,0,0,0.7)',
     margin: '20px',
-    '&:hover': {
-      backgroundColor: "white",
-      color: 'white',
+  //   '&:hover': {
+  //     backgroundColor: "white",
+  //     color: 'white',
       
-  },
+  // },
  
   },
 
@@ -71,7 +71,7 @@ head: {
   desc: {
     fontFamily: 'Nunito',
     fontSize: '1.1rem',
-    color: '#ddd',
+    color: '#fff',
   },
 
 

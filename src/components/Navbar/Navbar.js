@@ -3,9 +3,9 @@ import {AppBar,Button,Toolbar,Typography,Avatar} from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import useStyles from './styles';
 import camp from '../../images/camp.png';
-import mt from '../../images/mt.png';
-import ca from '../../images/ca.png';
-import it from '../../images/it.png';
+import center from '../../images/center.png';
+import camera from '../../images/camera.png';
+import rucksack from '../../images/rucksack.png';
 import {Link,useHistory,useLocation} from "react-router-dom";
 import * as actionType from '../../constants/actionTypes';
 import decode from 'jwt-decode';
@@ -40,18 +40,20 @@ const Navbar = () => {
 
     <AppBar className={classes.appBar} position='static' color='inherit'>
       <div className={classes.brandContainer}>
-    <Link to='/'  >
-        <img  className={classes.image1} src={camp} alt="icon" height="50"/>
-      </Link>
-      <Link to='center'  >
-        <img className={classes.image} src={mt} alt="icon" height="45"/>
-        </Link>
-      <Link to='posts'  >
-        <img className={classes.image} src={ca} alt="icon" height="45"/>
-        </Link>
-      <Link to='items'  >
-        <img className={classes.image} src={it} alt="icon" height="45"/>
-        </Link>
+        <Link to='/'  >
+            <img  className={classes.image1} src={camp} alt="icon" height="50"/>
+          </Link>
+          </div>
+          <div className={classes.navContainer}>
+          <Link to='center'  >
+            <img className={classes.image} src={center} alt="icon" height="50"/>
+            </Link>
+          <Link to='posts'  >
+            <img className={classes.image} src={camera} alt="icon" height="45"/>
+            </Link>
+          <Link to='items'  >
+            <img className={classes.image} src={rucksack} alt="icon" height="45"/>
+            </Link>
     </div>
     <Toolbar className={classes.toolbar}>
         {user?.result ? (
