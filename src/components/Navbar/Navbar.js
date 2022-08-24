@@ -45,7 +45,7 @@ const Navbar = () => {
           </Link>
           </div>
           <div className={classes.navContainer}>
-          <Link to='center'  >
+          <Link to='c'  >
             <img className={classes.image} src={center} alt="icon" height="50"/>
             </Link>
           <Link to='posts'  >

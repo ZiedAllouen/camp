@@ -4,7 +4,7 @@ import "./Listing.css";
 import { motion } from "framer-motion";
 
 const Listing = ({ data, open }) => {
-  const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace } =
+  const { imageUrl, title, address,  } =
     data;
 
   return (
@@ -18,9 +18,9 @@ const Listing = ({ data, open }) => {
           />
         </div>
         <div className="listing__details">
-          <div className="listing__type">For Sale</div>
+          {/* <div className="listing__type">For Sale</div> */}
           <div className="listing__row">
-            <span className="listing__price">{price}</span>
+            <span className="listing__price">{title}</span>
           </div>
           <div className="listing__row">
             <span className="listing__address">{address}</span>
