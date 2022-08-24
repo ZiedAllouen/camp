@@ -1,20 +1,30 @@
+import React, { useState } from "react";
 import CenterCard from './CenterCard';
 import places from './Static';
-
+import Overlay from "./Overlay/Overlay";
 import useStyles from './styles';
-import {Button, Divider } from '@material-ui/core';
+import { Divider } from '@material-ui/core';
+import Modal from "./Modal/Modal";
 
 export default function () {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
 
+  const openModal = () => {
+    setOpen(true);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+  };
   return (
     <>
     <div className={classes.places} >
-      <CenterCard place={places[0]}  />
+      <CenterCard place={places[0]} open={openModal} />
       <Divider className={classes.Divider} orientation="vertical" flexItem />
-      <CenterCard place={places[1]}  />
+      <CenterCard place={places[1]} open={openModal} />
       <Divider className={classes.Divider} orientation="vertical" flexItem />
-      <CenterCard place={places[2]} />
+      <CenterCard place={places[2]} open={openModal}/>
       
     </div>
     <div className={classes.places} >
@@ -35,7 +45,10 @@ export default function () {
       
       
     </div>
-     
+    {open && (
+          <Overlay close={closeModal}>
+            <Modal places={places}  />
+          </Overlay>)}
     </>
   );
 }

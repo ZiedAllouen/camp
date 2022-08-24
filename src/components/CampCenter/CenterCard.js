@@ -7,12 +7,12 @@ import { Button } from '@material-ui/core';
 import {Link} from "react-router-dom";
 import useStyles from './styles';
 
-export default function ImageCard({ place, checked }) {
+export default function ImageCard({ place,open }) {
   const classes = useStyles();
 
   return (
     <>
-      <Card className={classes.card}>
+      <Card className={classes.card} onClick={open}>
         <CardMedia
           className={classes.media}
           image={place.imageUrl}

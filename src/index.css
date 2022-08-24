@@ -11,3 +11,13 @@ body {
     background-image: url(./images/w.jpg);
     min-height: '100vh';
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #7f7e7e;
+    border-radius: 5px;
+  }

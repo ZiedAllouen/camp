@@ -12,6 +12,7 @@ import CreatorOrTagOI from './components/ItemDetails/CreatorOrTagOI'
 import Items from './components/Items/Items';
 import Fpage from './components/Fpage/Fpage'
 import CampCenter from './components/CampCenter/CampCenter';
+import Centers from './components/S/Centers';
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/fpage" />)} />
           <Route path="/fpage" exact component={Fpage} />
           <Route path="/center" exact component={CampCenter} />
+          <Route path="/c" exact component={Centers} />
         </Switch>
       </Container>
     </BrowserRouter>
