@@ -53,7 +53,7 @@ export default makeStyles((theme) => ({
   brandContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    // justifyContent: 'space-between'
     
   },
   navContainer: {

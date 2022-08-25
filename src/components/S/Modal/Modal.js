@@ -1,6 +1,7 @@
 import React from "react";
 import "./Modal.css";
-
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import PinDropIcon from '@material-ui/icons/PinDrop';
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 
@@ -10,6 +11,7 @@ const Modal = ({ data, close }) => {
     title,
     address,
     description,
+    number,
    
   } = data;
 
@@ -53,7 +55,10 @@ const Modal = ({ data, close }) => {
           <span className="modal__price">{title}</span>
         </motion.div>
         <motion.div className="modal__row" variants={modalRowVariants}>
-          <span className="modal__address">{address}</span>
+          <span className="modal__address"><PinDropIcon fontSize='small'/> {address}</span>
+        </motion.div>
+        <motion.div className="modal__row" variants={modalRowVariants}>
+          <span className="modal__address"><LocalPhoneIcon fontSize='small'/> {number}</span>
         </motion.div>
         <motion.div className="modal__row" variants={modalRowVariants}>
           

@@ -9,6 +9,7 @@ import rucksack from '../../images/rucksack.png';
 import {Link,useHistory,useLocation} from "react-router-dom";
 import * as actionType from '../../constants/actionTypes';
 import decode from 'jwt-decode';
+import Tooltip from '@mui/material/Tooltip';
 
 const Navbar = () => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -43,18 +44,30 @@ const Navbar = () => {
         <Link to='/'  >
             <img  className={classes.image1} src={camp} alt="icon" height="50"/>
           </Link>
-          </div>
+         
+          
           <div className={classes.navContainer}>
+          <Tooltip title="Centers" arrow>
           <Link to='c'  >
             <img className={classes.image} src={center} alt="icon" height="50"/>
             </Link>
+            </Tooltip>
+            <Tooltip title="Posts" arrow>
           <Link to='posts'  >
             <img className={classes.image} src={camera} alt="icon" height="45"/>
             </Link>
+            </Tooltip>
+            <Tooltip title="Items" arrow>
           <Link to='items'  >
             <img className={classes.image} src={rucksack} alt="icon" height="45"/>
             </Link>
-    </div>
+            </Tooltip>
+            <Tooltip title="Items" arrow>
+          <Link to='items'  >
+            <img className={classes.image} src={rucksack} alt="icon" height="45"/>
+            </Link>
+            </Tooltip>
+    </div></div>
     <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import PinDropIcon from '@material-ui/icons/PinDrop';
 import "./Listing.css";
 import { motion } from "framer-motion";
 
@@ -23,7 +23,7 @@ const Listing = ({ data, open }) => {
             <span className="listing__price">{title}</span>
           </div>
           <div className="listing__row">
-            <span className="listing__address">{address}</span>
+            <span className="listing__address"><PinDropIcon fontSize='small'/>{address}</span>
           </div>
           <div className="listing__row">
             
