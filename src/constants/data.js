@@ -12,7 +12,7 @@ export const properties = [
     id:2,
     title: 'Rtiba',
     description:
-      'Shaped like a giant sombrero, this lush volcanic island stars in countless South Pacific fantasies. The focal point and best asset of this tropical beauty is its ravishing lagoon in technicolor turquoise. Fish, turtles, sharks, and rays swim in the clear waters.',
+      'Rtiba is well known for being a camping spot, whether on the beach or in its forest where there are even equipped camping centers.There is a path, which leads to the beach, which crosses a forest, in the middle of this path you can find on your right a camping center, you can park your car in front of this center, then you will have to walk 40 minutes to reach the beach by walking on the path, or you can continue with the car on the path, at the end and during the summer season there are guards.',
     imageUrl: 'https://idwey.tn/uploads/0001/1232/2021/09/23/166987206-3760881560668117-6808105101674029310-n.jpg',
     address:"Takelsa , Nabeul, Tunisia",
     number:"+216 xxxxxxxx"

@@ -6,6 +6,8 @@ import camp from '../../images/camp.png';
 import center from '../../images/center.png';
 import camera from '../../images/camera.png';
 import rucksack from '../../images/rucksack.png';
+
+import kkj from '../../images/kkj.png';
 import {Link,useHistory,useLocation} from "react-router-dom";
 import * as actionType from '../../constants/actionTypes';
 import decode from 'jwt-decode';
@@ -41,7 +43,7 @@ const Navbar = () => {
 
     <AppBar className={classes.appBar} position='static' color='inherit'>
       <div className={classes.brandContainer}>
-        <Link to='/'  >
+        <Link to='/fpage'  >
             <img  className={classes.image1} src={camp} alt="icon" height="50"/>
           </Link>
          
@@ -54,7 +56,7 @@ const Navbar = () => {
             </Tooltip>
             <Tooltip title="Posts" arrow>
           <Link to='posts'  >
-            <img className={classes.image} src={camera} alt="icon" height="45"/>
+            <img className={classes.image} src={camera} alt="icon" height="47"/>
             </Link>
             </Tooltip>
             <Tooltip title="Items" arrow>
@@ -62,9 +64,9 @@ const Navbar = () => {
             <img className={classes.image} src={rucksack} alt="icon" height="45"/>
             </Link>
             </Tooltip>
-            <Tooltip title="Items" arrow>
-          <Link to='items'  >
-            <img className={classes.image} src={rucksack} alt="icon" height="45"/>
+            <Tooltip title="Contact Us" arrow>
+          <Link to='contact'  >
+            <img className={classes.image} src={kkj} alt="icon" height="60"/>
             </Link>
             </Tooltip>
     </div></div>

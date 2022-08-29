@@ -2,7 +2,7 @@ const places = [
   {
     title: 'Camp Centers ',
     description:
-      'Shaped like a giant sombrero, this lush volcanic island stars in countless South Pacific fantasies. The focal point and best asset of this tropical beauty is its ravishing lagoon in technicolor turquoise. Fish, turtles, sharks, and rays swim in the clear waters.',
+      'We are happy to share with you some of the best camping centers in tunisia ,each place has address, guide number and a description .',
     imageUrl: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     time: 1500,
     link:'/c',
@@ -10,7 +10,7 @@ const places = [
     {
       title: 'Camp Memories',
       description:
-        'Shaped like a giant sombrero, this lush volcanic island stars in countless South Pacific fantasies. The focal point and best asset of this tropical beauty is its ravishing lagoon in technicolor turquoise. Fish, turtles, sharks, and rays swim in the clear waters.',
+        "Our web application provides for all camping lovers a space to share their camping memories with their friends and react with other's memories by liking their posts or adding some comments .",
       imageUrl: 'https://images.pexels.com/photos/265946/pexels-photo-265946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       time: 1500,
       link:'/items',
@@ -18,10 +18,10 @@ const places = [
     {
       title: 'Camp Items ',
       description:
-        'Shaped like a giant sombrero, this lush volcanic island stars in countless South Pacific fantasies. The focal point and best asset of this tropical beauty is its ravishing lagoon in technicolor turquoise. Fish, turtles, sharks, and rays swim in the clear waters.',
+        'Our web application provides for all camping lovers a space to sell their camping items or to buy items they need .',
       imageUrl: 'https://images.pexels.com/photos/167696/pexels-photo-167696.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       time: 1500,
-      link:'/posts',
+      link:'/items',
     },
   ];
   

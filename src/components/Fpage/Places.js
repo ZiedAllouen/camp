@@ -19,7 +19,7 @@ export default function () {
       
     </div>
     <div className={classes.button}>
-    <Link to="/">
+    <Link to="/contact">
       <Button  variant="contained" color="primary" size="large" >Contact Us</Button>
     </Link>
     </div>

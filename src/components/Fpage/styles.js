@@ -51,7 +51,7 @@ button:{
 
   card: {
     maxWidth: 400,
-  
+  minHeight:620,
     background: 'rgba(0,0,0,0.5)',
     margin: '20px',
     borderRadius:'30px'
